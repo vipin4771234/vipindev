@@ -1,0 +1,113 @@
+.firstName {
+  margin-left: 100px;
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.lastName {
+  margin-left: 10px;
+  color: #afb42b;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.tabContainer {
+  display: flex;
+  flex-direction: row;
+  /* background-color: red; */
+}
+
+.about {
+  color: rgb(211, 211, 211);
+  font-weight: 600;
+  font-size: 12px;
+  margin-right: 20px;
+}
+
+.downloadText {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+}
+
+.downloadContainer {
+  background-color: #afb42b;
+  margin-right: 70px;
+  width: 150px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.menu {
+    display: none;
+    margin-right: 70px;
+}
+
+@media (max-width: 1000px) {
+  .firstName {
+    margin-left: 50px;
+    color: white;
+    font-weight: 700;
+    font-size: 23px;
+  }
+
+  .lastName {
+    margin-left: 10px;
+    color: #afb42b;
+    font-weight: 700;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 970px) {
+  .tabContainer {
+    display: none;
+    flex-direction: row;
+  }
+  
+  .menu {
+    display: flex;
+    margin-right: 70px;
+}
+
+  .downloadContainer {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .firstName {
+    margin-left: 30px;
+    color: white;
+    font-weight: 700;
+    font-size: 23px;
+  }
+
+  .lastName {
+    margin-left: 10px;
+    color: #afb42b;
+    font-weight: 700;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .firstName {
+    margin-left: 20px;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .lastName {
+    margin-left: 8px;
+    color: #afb42b;
+    font-weight: 700;
+    font-size: 25px;
+  }
+}
