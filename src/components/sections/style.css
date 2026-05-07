@@ -1,0 +1,500 @@
+.sectionsLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 0 40px 12px;
+}
+
+.sectionCard {
+  padding: 34px;
+  border-radius: 24px !important;
+  background-color: #00283a !important;
+  color: white;
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.18) !important;
+  scroll-margin-top: 112px;
+}
+
+.sectionHeader {
+  margin-bottom: 24px;
+}
+
+.sectionEyebrow,
+.subsectionEyebrow {
+  margin: 0 0 10px;
+  color: #afb42b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: 30px;
+}
+
+.subsectionHeader {
+  margin-bottom: 18px;
+}
+
+.subsectionTitle {
+  margin: 0;
+  font-size: 22px;
+  color: white;
+}
+
+.sectionCopy {
+  margin: 0 0 18px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.aboutGrid,
+.resumeGrid,
+.contactSectionLayout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.strengthList,
+.projectGrid,
+.contactGrid,
+.blogGrid,
+.skillGroupList,
+.timelineList {
+  display: grid;
+  gap: 18px;
+}
+
+.strengthItem,
+.projectCard,
+.resumeBlock,
+.contactCard,
+.blogCard,
+.skillGroupCard,
+.contactFormWrap,
+.timelineItem {
+  border-radius: 18px;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.strengthList {
+  margin-top: 22px;
+}
+
+.strengthItem {
+  padding: 18px 20px;
+  color: white;
+  font-size: 14px;
+  line-height: 1.6;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.strengthItem:hover {
+  transform: translateY(-2px);
+  border-color: rgba(175, 180, 43, 0.2);
+}
+
+.skillGroupCard,
+.resumeBlock,
+.timelineItem,
+.projectCard,
+.blogCard,
+.contactCard {
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skillGroupCard:hover,
+.projectCard:hover,
+.blogCard:hover,
+.contactCard:hover,
+.timelineItem:hover {
+  transform: translateY(-2px);
+  border-color: rgba(175, 180, 43, 0.2);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+}
+
+.skillGroupCard {
+  padding: 20px;
+}
+
+.skillGroupTitle {
+  margin: 0;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.projectGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.projectTitle,
+.blogTitle {
+  margin: 0;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.projectBlurb,
+.blogExcerpt {
+  margin: 16px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.projectLinkRow,
+.tagList,
+.resumeActions,
+.formFooter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.projectLinkRow {
+  margin-top: auto;
+  padding-top: 22px;
+}
+
+.tagList {
+  margin-top: 20px;
+}
+
+.compactTagList {
+  margin-top: 14px;
+}
+
+.tag {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background-color: rgba(175, 180, 43, 0.12);
+  color: #dce08e;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.inlineActionLink,
+.resumeLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #afb42b;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.inlineActionLink:hover,
+.resumeLink:hover {
+  color: #dce08e;
+  transform: translateY(-1px);
+}
+
+.inlineActionLink:focus-visible,
+.resumeLink:focus-visible,
+.contactCard:focus-visible,
+.primaryButton:focus-visible,
+.fieldInput:focus-visible {
+  outline: 2px solid #afb42b;
+  outline-offset: 4px;
+}
+
+.resumeBlock {
+  padding: 24px;
+}
+
+.timelineList {
+  position: relative;
+}
+
+.timelineItem {
+  position: relative;
+  padding: 22px 22px 22px 24px;
+}
+
+.timelineItem::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 4px;
+  height: calc(100% - 48px);
+  border-radius: 999px;
+  background-color: rgba(175, 180, 43, 0.34);
+}
+
+.timelinePeriod {
+  margin: 0;
+  color: #afb42b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.timelineTitle {
+  margin: 14px 0 0;
+  color: white;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.timelineSubtitle {
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.timelinePointList {
+  margin-top: 16px;
+}
+
+.timelinePoint {
+  margin: 0 0 12px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.timelinePoint:last-child {
+  margin-bottom: 0;
+}
+
+.contactGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: start;
+}
+
+.contactCard {
+  min-height: 172px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  text-decoration: none;
+  color: white;
+}
+
+.contactIcon {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(175, 180, 43, 0.14);
+  color: #afb42b;
+  font-size: 18px;
+}
+
+.contactLabel {
+  margin-top: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.contactValue {
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.contactFormWrap {
+  padding: 24px;
+}
+
+.contactFormHeader {
+  margin-bottom: 22px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.fieldBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fieldLabel {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.fieldInput {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  background-color: rgba(255, 255, 255, 0.03);
+  color: white;
+  padding: 14px 16px;
+  font: inherit;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.fieldInput::placeholder {
+  color: rgba(255, 255, 255, 0.32);
+}
+
+.fieldInput:hover,
+.fieldInput:focus {
+  border-color: rgba(175, 180, 43, 0.4);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.fieldTextarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.fieldError {
+  border-color: #d96f6f;
+}
+
+.fieldMessage {
+  color: #ffb1b1;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.formFooter {
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+
+.primaryButton {
+  min-height: 46px;
+  padding: 0 22px;
+  border: 0;
+  border-radius: 16px;
+  background-color: #afb42b;
+  color: #00151f;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primaryButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(175, 180, 43, 0.22);
+}
+
+.primaryButton:active {
+  transform: translateY(0);
+}
+
+.formStatus {
+  margin: 0;
+  max-width: 360px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.successStatus {
+  color: #dce08e;
+}
+
+.errorStatus {
+  color: #ffb1b1;
+}
+
+.draftLink {
+  margin-top: 4px;
+}
+
+.blogGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.blogCard {
+  padding: 24px;
+}
+
+.blogMeta {
+  margin: 0 0 14px;
+  color: #afb42b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+@media (max-width: 1100px) {
+  .projectGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contactSectionLayout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .aboutGrid,
+  .resumeGrid,
+  .formGrid,
+  .contactGrid,
+  .blogGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionsLayout {
+    padding: 0 8px 8px;
+  }
+
+  .sectionCard {
+    padding: 28px 22px;
+    scroll-margin-top: 96px;
+  }
+
+  .sectionTitle {
+    font-size: 26px;
+  }
+
+  .subsectionTitle {
+    font-size: 20px;
+  }
+
+  .projectGrid,
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formFooter {
+    flex-direction: column;
+  }
+}

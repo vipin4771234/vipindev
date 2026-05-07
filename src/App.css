@@ -1,50 +1,45 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .App {
-  text-align: center;
+  min-height: 100vh;
   padding: 10px;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  /* background-color: #00283a; */
-  margin: 10px;
-  border-radius: 10px;
-  /* background-color: #00283a; */
-  height: 60px;
-  /* padding-left: 20px; */
-  /* min-height: 100vh; */
-  /* height: 200vh; */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  font-size: calc(7px + 2vmin);
   color: white;
-  box-shadow: 1px 1px 2px 1px #00283a;
 }
 
-.header-name {
-  color: '#afb42b';
+body {
+  background-color: #00151f;
 }
 
-.App-link {
-  color: #61dafb;
+.pageContent {
+  max-width: 1400px;
+  margin: 0 auto 64px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.heroSection {
+  position: relative;
+  margin-bottom: 56px;
+  padding-bottom: 170px;
+}
+
+@media (max-width: 1180px) {
+  .heroSection {
+    padding-bottom: 220px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding: 8px;
+  }
+
+  .pageContent {
+    margin-bottom: 48px;
+  }
+
+  .heroSection {
+    padding-bottom: 0;
+    margin-bottom: 36px;
   }
 }

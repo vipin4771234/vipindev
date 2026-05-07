@@ -1,0 +1,92 @@
+.bannerContainer {
+  position: relative;
+  padding: 0 40px;
+  margin-top: -8px;
+}
+
+.bannerImage {
+  width: 100%;
+  height: 480px;
+  border-radius: 24px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+
+.bannerOverlay {
+  position: absolute;
+  right: 88px;
+  bottom: 70px;
+  width: min(460px, calc(100% - 160px));
+  text-align: left;
+}
+
+.bannerEyebrow {
+  margin: 0 0 12px;
+  color: #afb42b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.bannerTitle {
+  margin: 0;
+  color: white;
+  font-size: 42px;
+  line-height: 1.1;
+}
+
+.bannerDescription {
+  margin: 18px 0 0;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+@media (max-width: 1180px) {
+  .bannerOverlay {
+    right: 60px;
+    bottom: 56px;
+    width: min(400px, calc(100% - 120px));
+  }
+
+  .bannerTitle {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bannerContainer {
+    padding: 0 8px;
+  }
+
+  .bannerImage {
+    height: 380px;
+  }
+
+  .bannerOverlay {
+    right: 28px;
+    left: 28px;
+    bottom: 28px;
+    width: auto;
+  }
+
+  .bannerTitle {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bannerImage {
+    height: 340px;
+  }
+
+  .bannerTitle {
+    font-size: 26px;
+  }
+
+  .bannerDescription {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}

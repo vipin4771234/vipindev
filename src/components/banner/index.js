@@ -1,25 +1,19 @@
 import React from "react";
+import bannerImage from "../../assets/banner-illustration.svg";
+import "./style.css";
 
 const Banner = () => {
   return (
-    <div
-      style={{
-        paddingLeft: 50,
-        paddingRight: 50,
-        zIndex: -99999,
-        position: 'relative',
-        marginTop: -15,
-        // left: 30,
-      }}
-    >
-      {/* <div id="logo" style={{ width: "100%", height: 400, borderRadius: 20, overflow: 'hidden'  }}> */}
-      <img
-        src="https://trueman-react.vercel.app/img/banner2.jpg"
-        style={{ width: "100%", height: 400, borderRadius: 20, objectFit: 'cover'}}
-        
-        alt="banner_image"
-      />
-      {/* </div> */}
+    <div className="bannerContainer">
+      <img className="bannerImage" src={bannerImage} alt="Banner background" />
+      <div className="bannerOverlay">
+        <p className="bannerEyebrow">SOFTWARE DEVELOPER</p>
+        <h1 className="bannerTitle">Building clean, responsive interfaces.</h1>
+        <p className="bannerDescription">
+          Focused on React, polished component systems, and product experiences
+          that feel calm, useful, and easy to navigate.
+        </p>
+      </div>
     </div>
   );
 };

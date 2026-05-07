@@ -1,12 +1,33 @@
+.headerWrapper {
+  position: sticky;
+  top: 10px;
+  z-index: 50;
+  max-width: 1400px;
+  margin: 0 auto 24px;
+}
+
+.brandContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.brandButton {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
 .firstName {
-  margin-left: 100px;
+  margin: 0;
   color: white;
   font-weight: 700;
   font-size: 25px;
 }
 
 .lastName {
-  margin-left: 10px;
+  margin: 0 0 0 10px;
   color: #afb42b;
   font-weight: 700;
   font-size: 25px;
@@ -15,7 +36,7 @@
 .tabContainer {
   display: flex;
   flex-direction: row;
-  /* background-color: red; */
+  align-items: center;
 }
 
 .about {
@@ -23,57 +44,132 @@
   font-weight: 600;
   font-size: 12px;
   margin-right: 20px;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  transition: color 0.2s ease;
+}
+
+.about:hover,
+.about.active {
+  color: #afb42b;
+}
+
+.about:focus-visible,
+.downloadContainer:focus-visible,
+.menuButton:focus-visible,
+.brandButton:focus-visible,
+.mobileNavLink:focus-visible,
+.mobileDownloadLink:focus-visible {
+  outline: 2px solid #afb42b;
+  outline-offset: 4px;
 }
 
 .downloadText {
   text-align: center;
-  align-items: center;
-  justify-content: center;
   font-size: 12px;
   font-weight: 700;
   color: white;
+  letter-spacing: 0.08em;
 }
 
 .downloadContainer {
   background-color: #afb42b;
-  margin-right: 70px;
   width: 150px;
+  min-height: 42px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 20px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.menu {
-    display: none;
-    margin-right: 70px;
+.downloadContainer:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(175, 180, 43, 0.22);
+}
+
+.downloadContainer:active {
+  transform: translateY(0);
+}
+
+.menuButton {
+  display: none;
+  margin-left: 20px;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuButton:hover {
+  opacity: 0.85;
+}
+
+.mobileMenu {
+  margin-top: 12px;
+  border-radius: 18px !important;
+  background-color: #00283a !important;
+  overflow: hidden;
+}
+
+.mobileMenuLinks {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+}
+
+.mobileNavLink,
+.mobileDownloadLink {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 12px 14px;
+  border-radius: 12px;
+}
+
+.mobileNavLink:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.activeMobileNavLink {
+  background-color: rgba(175, 180, 43, 0.12);
+  color: #dce08e;
+}
+
+.mobileDownloadLink {
+  margin-top: 8px;
+  background-color: #afb42b;
+  color: #00151f;
+  text-align: center;
+}
+
+.mobileDownloadLink:hover {
+  filter: brightness(0.98);
 }
 
 @media (max-width: 1000px) {
   .firstName {
-    margin-left: 50px;
-    color: white;
-    font-weight: 700;
     font-size: 23px;
   }
 
   .lastName {
-    margin-left: 10px;
-    color: #afb42b;
-    font-weight: 700;
-    font-size: 25px;
+    font-size: 23px;
   }
 }
 
 @media (max-width: 970px) {
   .tabContainer {
     display: none;
-    flex-direction: row;
   }
-  
-  .menu {
+
+  .menuButton {
     display: flex;
-    margin-right: 70px;
-}
+  }
 
   .downloadContainer {
     display: none;
@@ -82,32 +178,26 @@
 
 @media (max-width: 768px) {
   .firstName {
-    margin-left: 30px;
-    color: white;
-    font-weight: 700;
     font-size: 23px;
   }
 
   .lastName {
-    margin-left: 10px;
-    color: #afb42b;
-    font-weight: 700;
-    font-size: 25px;
+    font-size: 23px;
   }
 }
 
 @media (max-width: 480px) {
+  .headerWrapper {
+    top: 8px;
+    margin-bottom: 18px;
+  }
+
   .firstName {
-    margin-left: 20px;
-    color: white;
-    font-weight: 700;
     font-size: 20px;
   }
 
   .lastName {
     margin-left: 8px;
-    color: #afb42b;
-    font-weight: 700;
-    font-size: 25px;
+    font-size: 20px;
   }
 }

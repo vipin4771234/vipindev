@@ -1,32 +1,51 @@
 import React from "react";
 import "./style.css";
 import Typewriter from "typewriter-effect";
+import profileAvatar from "../../assets/profile-avatar.svg";
 
 export const InfoCard = () => {
   return (
     <div className="container">
       <img
         className="image"
-        src="https://trueman-react.vercel.app/img/banner2.jpg"
-        alt="profile"
+        src={profileAvatar}
+        alt="Vipin Vishwakarma avatar"
       />
-      <div style={{ alignItems: "center", justifyContent: "center" }}>
+      <div className="infoCardHeader">
         <p className="firstNameCard">Vipin Vishwakarma</p>
         <Typewriter
-        options={{wrapperClassName: 'desigText', loop: true}}
+          options={{ wrapperClassName: "desigText", loop: true }}
           onInit={(typewriter) => {
-                typewriter
-                  .typeString("I'm Software Developer")
-                  .pauseFor(1000)
-                  .deleteAll()
-                  .start();
+            typewriter
+              .typeString("I'm Software Developer")
+              .pauseFor(1000)
+              .deleteAll()
+              .start();
           }}
         />
       </div>
-
-      <p style={{ color: "gray", opacity: 0.3 }}>
-        ...................................................................
+      <p className="cardSummary">
+        Frontend-focused developer crafting portfolio sites, reusable UI, and
+        responsive product experiences.
       </p>
+      <div className="infoDivider" />
+      <div className="infoMeta">
+        <div className="infoRow">
+          <span className="infoLabel">Focus</span>
+          <span>React UI</span>
+        </div>
+        <div className="infoRow">
+          <span className="infoLabel">Based In</span>
+          <span>India</span>
+        </div>
+        <div className="infoRow">
+          <span className="infoLabel">Available</span>
+          <span>Freelance & Full-time</span>
+        </div>
+      </div>
+      <a className="cardPrimaryLink" href="#contact">
+        LET&apos;S TALK
+      </a>
     </div>
   );
 };
