@@ -1,0 +1,74 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 762 >>
+stream
+BT
+/F2 24 Tf
+72 740 Td
+(Vipin Vishwakarma) Tj
+0 -26 Td
+/F1 12 Tf
+(Software Developer) Tj
+0 -32 Td
+/F2 14 Tf
+(Summary) Tj
+/F1 12 Tf
+0 -18 Td
+(Builds responsive React interfaces with a focus on clarity, structure, and reusable UI patterns.) Tj
+0 -32 Td
+/F2 14 Tf
+(Core Skills) Tj
+/F1 12 Tf
+0 -18 Td
+(React, JavaScript, Material UI, Responsive CSS, Component Design) Tj
+0 -32 Td
+/F2 14 Tf
+(Highlights) Tj
+/F1 12 Tf
+0 -18 Td
+(- Single-page portfolio layout with section navigation) Tj
+0 -18 Td
+(- Downloadable CV workflow for deployment-ready sharing) Tj
+0 -18 Td
+(- Clean dark interface styled around the existing teal/lime palette) Tj
+0 -32 Td
+/F2 14 Tf
+(Contact) Tj
+/F1 12 Tf
+0 -18 Td
+(Email: vipin@example.com) Tj
+0 -18 Td
+(GitHub: github.com/vipin4771234) Tj
+ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000019 00000 n 
+0000000068 00000 n 
+0000000125 00000 n 
+0000000261 00000 n 
+0000000331 00000 n 
+0000000406 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+1219
+%%EOF
