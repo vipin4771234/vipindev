@@ -17,7 +17,7 @@ export const InfoCard = () => {
           options={{ wrapperClassName: "desigText", loop: true }}
           onInit={(typewriter) => {
             typewriter
-              .typeString("I'm Software Developer")
+              .typeString("I'm a Full-Stack Developer")
               .pauseFor(1000)
               .deleteAll()
               .start();
@@ -25,14 +25,14 @@ export const InfoCard = () => {
         />
       </div>
       <p className="cardSummary">
-        Frontend-focused developer crafting portfolio sites, reusable UI, and
-        responsive product experiences.
+        Full-stack developer building web and mobile products with React,
+        React Native, .NET, Python, and Django.
       </p>
       <div className="infoDivider" />
       <div className="infoMeta">
         <div className="infoRow">
           <span className="infoLabel">Focus</span>
-          <span>React UI</span>
+          <span>React &amp; .NET</span>
         </div>
         <div className="infoRow">
           <span className="infoLabel">Based In</span>

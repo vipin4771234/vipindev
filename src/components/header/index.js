@@ -50,7 +50,11 @@ const Header = ({ navItems, cvUrl, activeHref, onNavClick }) => {
             </a>
           ))}
         </nav>
-        <a className="downloadContainer" href={cvUrl} download>
+        <a
+          className="downloadContainer"
+          href={cvUrl}
+          download="Vipin_Vishwakarma_Resume.pdf"
+        >
           <span className="downloadText">DOWNLOAD CV</span>
         </a>
         <button
@@ -86,7 +90,7 @@ const Header = ({ navItems, cvUrl, activeHref, onNavClick }) => {
             <a
               className="mobileDownloadLink"
               href={cvUrl}
-              download
+              download="Vipin_Vishwakarma_Resume.pdf"
               onClick={() => setMenuOpen(false)}
             >
               DOWNLOAD CV

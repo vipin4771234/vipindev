@@ -4,6 +4,7 @@ import Header from "./components/header";
 import Banner from "./components/banner";
 import { InfoCard } from "./components/InfoCard";
 import Sections from "./components/sections";
+import cvUrl from "./assets/Vipin_Vishwakarma_Resume.pdf";
 
 const navItems = [
   { label: "HOME", href: "#home" },
@@ -62,7 +63,7 @@ function App() {
     <div className="App">
       <Header
         navItems={navItems}
-        cvUrl={`${process.env.PUBLIC_URL}/Vipin-Vishwakarma-CV.pdf`}
+        cvUrl={cvUrl}
         activeHref={activeHref}
         onNavClick={handleNavClick}
       />
@@ -71,7 +72,7 @@ function App() {
           <Banner />
           <InfoCard />
         </section>
-        <Sections />
+        <Sections cvUrl={cvUrl} />
       </main>
     </div>
   );

@@ -7,11 +7,11 @@ const Banner = () => {
     <div className="bannerContainer">
       <img className="bannerImage" src={bannerImage} alt="Banner background" />
       <div className="bannerOverlay">
-        <p className="bannerEyebrow">SOFTWARE DEVELOPER</p>
-        <h1 className="bannerTitle">Building clean, responsive interfaces.</h1>
+        <p className="bannerEyebrow">FULL-STACK DEVELOPER</p>
+        <h1 className="bannerTitle">Building web and mobile products.</h1>
         <p className="bannerDescription">
-          Focused on React, polished component systems, and product experiences
-          that feel calm, useful, and easy to navigate.
+          React, React Native, .NET, Python, and Django — from public
+          enrollment flows to signed-in member portals.
         </p>
       </div>
     </div>

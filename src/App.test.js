@@ -6,7 +6,7 @@ jest.mock('typewriter-effect', () => {
   return function MockTypewriter(props) {
     return (
       <span className={props.options?.wrapperClassName}>
-        I&apos;m Software Developer
+        I&apos;m a Full-Stack Developer
       </span>
     );
   };
@@ -16,7 +16,7 @@ test("renders the portfolio sections and download action", () => {
   render(<App />);
   expect(
     screen.getByRole("heading", {
-      name: /building clean, responsive interfaces/i,
+      name: /building web and mobile products/i,
     })
   ).toBeInTheDocument();
   expect(screen.getByRole("link", { name: /about/i })).toBeInTheDocument();

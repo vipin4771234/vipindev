@@ -9,83 +9,85 @@ import {
 } from "react-icons/fa";
 import "./style.css";
 
+const CONTACT_EMAIL = "vipin.native@gmail.com";
+
 const projects = [
   {
-    title: "Responsive Portfolio Shell",
+    title: "ClearMatch / HealthPlanOne",
     blurb:
-      "A single-page React portfolio with smooth section navigation, downloadable resume support, and a mobile-friendly hero layout.",
-    stack: ["React", "MUI", "CSS", "Responsive UI"],
+      "Medicare compare, enroll, and member-portal work for HealthPlanOne's ClearMatch platform — public plan shopping plus signed-in coverage, benefits, and member tools.",
+    stack: ["React", "Redux", ".NET", "Python", "Django"],
+    liveUrl: "https://myclearmatch.com/",
+  },
+  {
+    title: "Personal Portfolio",
+    blurb:
+      "This site: a single-page React portfolio with section navigation, a downloadable resume, and a validated contact flow.",
+    stack: ["React", "MUI", "CSS"],
     githubUrl: "https://github.com/vipin4771234/vipindev",
     liveUrl: "https://vipin4771234.github.io/vipindev",
-  },
-  {
-    title: "Component-First UI Work",
-    blurb:
-      "Reusable interface patterns built around cards, navigation, and content sections that scale cleanly as new work is added.",
-    stack: ["Frontend", "Reusable UI", "Design Systems"],
-    githubUrl: "https://github.com/vipin4771234",
-    liveUrl: "#portfolio",
-  },
-  {
-    title: "Conversion-Focused Contact Flow",
-    blurb:
-      "A cleaner contact area with clear actions, quick identity cues, and a validated form that is ready to connect to a real inbox flow.",
-    stack: ["UX", "Interaction", "Forms"],
-    githubUrl: "https://github.com/vipin4771234",
-    liveUrl: "#contact",
   },
 ];
 
 const strengths = [
-  "Reusable React components and clean page structure",
-  "Responsive layouts that stay readable across breakpoints",
-  "Dark UI styling with clear hierarchy and calm visual rhythm",
+  "Full-stack features across React, React Native, and .NET APIs",
+  "Responsive web and mobile UIs with reusable component structure",
+  "REST integrations, auth-aware flows, and production-minded delivery",
 ];
 
 const skillGroups = [
   {
-    title: "Frontend",
-    items: ["React", "JavaScript", "HTML5", "CSS3", "Responsive Design"],
+    title: "Frontend & Mobile",
+    items: ["React", "React Native", "Redux", "JavaScript", "TypeScript", "HTML", "CSS"],
   },
   {
-    title: "UI Systems",
-    items: ["Material UI", "Reusable Components", "Design Tokens", "Layout"],
+    title: "Backend",
+    items: [".NET", "ASP.NET Core", "C#", "Python", "Django", "REST APIs"],
   },
   {
-    title: "Workflow",
-    items: ["GitHub", "Deployment", "Testing Basics", "Code Cleanup"],
+    title: "Data & Workflow",
+    items: ["SQL Server", "MySQL", "GitHub", "AWS", "Azure", "Docker"],
   },
 ];
 
 const experienceItems = [
   {
-    period: "2024 - Present",
-    title: "Frontend Developer",
-    subtitle: "Independent Projects",
+    period: "Feb 2026 - Present",
+    title: "Full Stack Developer",
+    subtitle: "Info-X Software Technology Pvt. Ltd.",
     points: [
-      "Builds polished React layouts with a focus on clarity, structure, and maintainability.",
-      "Turns simple portfolio and landing concepts into responsive interfaces with reusable sections.",
+      "Building customer-facing React features for a logistics platform, including tracking, orders, invoicing, and reporting.",
+      "Maintaining .NET/C# REST APIs and integrating SMS and payment services for shipment updates and invoice payments.",
     ],
   },
   {
-    period: "2023 - 2024",
-    title: "UI Implementation Practice",
-    subtitle: "Component-Focused Learning",
+    period: "Apr 2024 - Feb 2026",
+    title: "Full Stack Developer",
+    subtitle: "Jupiter Orison Pvt Ltd, Gurugram",
     points: [
-      "Strengthened frontend fundamentals through repeated layout builds and UI experimentation.",
-      "Focused on navigation, content hierarchy, mobile breakpoints, and cleaner interface polish.",
+      "Built Repair India, a service marketplace, using React Native, React, and ASP.NET Core APIs.",
+      "Owned booking, scheduling, provider allocation, ratings, and location-based matching end to end.",
+    ],
+  },
+  {
+    period: "Feb 2023 - Mar 2024",
+    title: "Software Developer",
+    subtitle: "Websultanate Software Tech., Lucknow",
+    points: [
+      "Shipped Pool Tester, a React Native pool-maintenance app, to the Apple App Store.",
+      "Built React frontends and real-time Socket chat for the Scrooge gaming site.",
     ],
   },
 ];
 
 const educationItems = [
   {
-    period: "Academic Background",
-    title: "Software and Web Development Learning Path",
-    subtitle: "Coursework and Hands-On Practice",
+    period: "2019 - 2022",
+    title: "Bachelor of Computer Application",
+    subtitle: "University of Allahabad",
     points: [
-      "Built a practical foundation in JavaScript, React, and responsive web development.",
-      "Applied concepts through personal projects and portfolio-focused implementation work.",
+      "Completed a BCA with a focus on software and web development fundamentals.",
+      "Applied coursework through personal and professional product work in JavaScript, React, and .NET.",
     ],
   },
 ];
@@ -93,14 +95,14 @@ const educationItems = [
 const contactLinks = [
   {
     label: "Email",
-    value: "vipin@example.com",
-    href: "mailto:vipin@example.com",
+    value: CONTACT_EMAIL,
+    href: `mailto:${CONTACT_EMAIL}`,
     icon: <FaEnvelope />,
   },
   {
     label: "Phone",
-    value: "+91 90000 00000",
-    href: "tel:+919000000000",
+    value: "+91 7905643535",
+    href: "tel:+917905643535",
     icon: <FaPhoneAlt />,
   },
   {
@@ -111,8 +113,8 @@ const contactLinks = [
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/vipin-vishwakarma",
-    href: "https://www.linkedin.com/in/vipin-vishwakarma",
+    value: "linkedin.com/in/vipin-vishwakarma-6ba2111b3",
+    href: "https://www.linkedin.com/in/vipin-vishwakarma-6ba2111b3",
     icon: <FaLinkedinIn />,
   },
 ];
@@ -146,7 +148,7 @@ const buildMailtoHref = ({ name, email, subject, message }) => {
     message,
   ].join("\n");
 
-  return `mailto:vipin@example.com?subject=${encodeURIComponent(
+  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
     fullSubject
   )}&body=${encodeURIComponent(fullBody)}`;
 };
@@ -195,8 +197,7 @@ const renderTimelineBlock = (items) => {
   ));
 };
 
-const Sections = () => {
-  const cvUrl = `${process.env.PUBLIC_URL}/Vipin-Vishwakarma-CV.pdf`;
+const Sections = ({ cvUrl }) => {
   const [formValues, setFormValues] = useState(initialFormValues);
   const [formErrors, setFormErrors] = useState({});
   const [submitState, setSubmitState] = useState("idle");
@@ -264,14 +265,14 @@ const Sections = () => {
         <div className="aboutGrid">
           <div>
             <p className="sectionCopy">
-              I&apos;m Vipin Vishwakarma, a software developer focused on
-              building straightforward interfaces that look polished and feel
-              easy to use.
+              I&apos;m Vipin Vishwakarma, a full-stack developer with 3+ years
+              of experience building web and mobile products in React, React
+              Native, .NET, Python, and Django.
             </p>
             <p className="sectionCopy">
-              This site is structured as a compact one-page portfolio, with
-              room to grow into a fuller showcase of work, resume details, and
-              writing over time.
+              Recent work includes Medicare plan compare, enrollment, and
+              member-portal features for HealthPlanOne&apos;s ClearMatch
+              platform, along with logistics, marketplace, and mobile apps.
             </p>
             <div className="strengthList">
               {strengths.map((item) => (
@@ -327,22 +328,26 @@ const Sections = () => {
                 ))}
               </div>
               <div className="projectLinkRow">
-                <a
-                  className="inlineActionLink"
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  GitHub <FiArrowUpRight />
-                </a>
-                <a
-                  className="inlineActionLink"
-                  href={project.liveUrl}
-                  target={project.liveUrl.startsWith("http") ? "_blank" : undefined}
-                  rel={project.liveUrl.startsWith("http") ? "noreferrer" : undefined}
-                >
-                  Live Demo <FiExternalLink />
-                </a>
+                {project.githubUrl ? (
+                  <a
+                    className="inlineActionLink"
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub <FiArrowUpRight />
+                  </a>
+                ) : null}
+                {project.liveUrl ? (
+                  <a
+                    className="inlineActionLink"
+                    href={project.liveUrl}
+                    target={project.liveUrl.startsWith("http") ? "_blank" : undefined}
+                    rel={project.liveUrl.startsWith("http") ? "noreferrer" : undefined}
+                  >
+                    Live Site <FiExternalLink />
+                  </a>
+                ) : null}
               </div>
             </article>
           ))}
@@ -369,7 +374,11 @@ const Sections = () => {
             </div>
             <div className="timelineList">{renderTimelineBlock(educationItems)}</div>
             <div className="resumeActions">
-              <a className="resumeLink" href={cvUrl} download>
+              <a
+                className="resumeLink"
+                href={cvUrl}
+                download="Vipin_Vishwakarma_Resume.pdf"
+              >
                 Download Full CV <FiArrowUpRight />
               </a>
             </div>
