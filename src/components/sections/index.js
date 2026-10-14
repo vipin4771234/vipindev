@@ -7,9 +7,12 @@ import {
   FaLinkedinIn,
   FaPhoneAlt,
 } from "react-icons/fa";
+import { trackEvent } from "../../analytics";
 import "./style.css";
 
 const CONTACT_EMAIL = "vipin.native@gmail.com";
+const FEATURED_VIDEO_URL =
+  "https://drive.google.com/file/d/1w5xhbM-pgzl9kJRvYDD34ZcalitLGv1z/preview";
 
 const projects = [
   {
@@ -253,6 +256,7 @@ const Sections = ({ cvUrl }) => {
     setFormErrors({});
     setPreparedDraftHref(buildMailtoHref(formValues));
     setSubmitState("success");
+    trackEvent("contact_form_submit");
   };
 
   return (
@@ -405,6 +409,9 @@ const Sections = ({ cvUrl }) => {
                 href={link.href}
                 target={link.href.startsWith("http") ? "_blank" : undefined}
                 rel={link.href.startsWith("http") ? "noreferrer" : undefined}
+                onClick={() =>
+                  trackEvent("contact_click", { method: link.label.toLowerCase() })
+                }
               >
                 <span className="contactIcon">{link.icon}</span>
                 <span className="contactLabel">{link.label}</span>
@@ -509,7 +516,11 @@ const Sections = ({ cvUrl }) => {
               </div>
 
               {preparedDraftHref ? (
-                <a className="inlineActionLink draftLink" href={preparedDraftHref}>
+                <a
+                  className="inlineActionLink draftLink"
+                  href={preparedDraftHref}
+                  onClick={() => trackEvent("contact_click", { method: "email_draft" })}
+                >
                   Open Email Draft <FiArrowUpRight />
                 </a>
               ) : null}
@@ -531,6 +542,22 @@ const Sections = ({ cvUrl }) => {
               <p className="blogExcerpt">{post.excerpt}</p>
             </article>
           ))}
+        </div>
+      </Paper>
+
+      <Paper className="sectionCard" component="section" id="video" elevation={2}>
+        <div className="sectionHeader">
+          <p className="sectionEyebrow">VIDEO</p>
+          <h2 className="sectionTitle">Featured Video</h2>
+        </div>
+        <div className="videoFrame">
+          <iframe
+            src={FEATURED_VIDEO_URL}
+            title="Featured video"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+            loading="lazy"
+          />
         </div>
       </Paper>
     </div>

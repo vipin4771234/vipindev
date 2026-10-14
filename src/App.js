@@ -5,6 +5,7 @@ import Banner from "./components/banner";
 import { InfoCard } from "./components/InfoCard";
 import Sections from "./components/sections";
 import cvUrl from "./assets/Vipin_Vishwakarma_Resume.pdf";
+import { trackEvent } from "./analytics";
 
 const navItems = [
   { label: "HOME", href: "#home" },
@@ -50,8 +51,36 @@ function App() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
+      return undefined;
+    }
+
+    // Report each section once per visit, when it crosses the middle of the viewport
+    // (works for sections taller than the screen, unlike a ratio threshold).
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            trackEvent("section_view", { section_name: entry.target.id });
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: "-50% 0px -50% 0px" }
+    );
+
+    document
+      .querySelectorAll("main section[id]")
+      .forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
   const handleNavClick = (href) => {
     const section = document.querySelector(href);
+
+    trackEvent("nav_click", { section_name: href.replace("#", "") });
 
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
